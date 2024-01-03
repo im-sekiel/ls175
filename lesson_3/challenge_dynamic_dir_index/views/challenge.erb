@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> Challenge </title>
+</head>
+<body>
+
+	<ul>
+		<% @list.each do |chapter| %>
+		<li><a href=<%= chapter %>><%= chapter %></a></li>
+		<% end %>
+	</ul>
+
+	<p>
+		<% if params[:sort] == "desc" %>
+			<a href="/">Sort ascending</a>
+		<% else %>
+			<a href="/?sort=desc"> Sort descending </a>
+		<% end %>
+ 	</p>
+</body>
+</html>
