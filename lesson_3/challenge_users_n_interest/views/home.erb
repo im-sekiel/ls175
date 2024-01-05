@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> Challenge </title>
+</head>
+<body>
+
+<ul>
+<% @users.each do |user| %>
+	<li><a href="/<%= user.to_s %>"><%= user.to_s %></a></li>
+<% end %>
+</ul>
+
+</body>
+</html>
