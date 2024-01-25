@@ -1,0 +1,29 @@
+<ul>
+	<% @files.each do |file| %>
+	<% file = remove_path(file) %>
+	<li>
+			<a href="/<%= file %>"><%= file %></a>
+			<form action="/<%= file %>/edit" method="post">
+				<button type="submit">Edit</button>
+			</form>
+			<form action="/<%= file %>/delete" method="post">
+				<button type="submit">Delete</button>
+			</form>
+	</li>
+	<% end %>
+</ul>
+
+<a href="/new">Create A New Document</a>
+
+<div class="uppermargin">
+<% if session[:username] == 'admin' %>
+	<span><em>You're signed in as Admin.</em></span>
+	<form action="/users/signout" method="post">
+		<button type="submit">Sign Out</button>
+	</form>
+<% else %>
+	<form action="/users/signin" method="get">
+		<button type="submit">Sign In</button>
+	</form>
+<% end %>
+</div>

@@ -1,0 +1,17 @@
+body {
+  padding: 1em;
+  font-family: sans-serif;
+}
+
+form {
+  display: inline-block;
+}
+
+.message {
+  padding: 10px;
+  background: #FFFF99;
+}
+
+.uppermargin {
+  margin-top: 1em;
+}

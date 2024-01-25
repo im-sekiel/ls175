@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/cms.css">
+	<title>CMS Project</title>
+</head>
+<body>
+
+	<% if session[:error] %>
+		<p class="message"><%= session.delete(:error) %></p>
+	<% end %>
+
+	<%= yield %>
+
+</body>
+</html>
